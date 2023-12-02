@@ -1,5 +1,7 @@
 import React from 'react'
 import'./moviecontentent.css'
+import Button from 'react-bootstrap/Button';
+
 function MovieContent() {
   return (
     <div className="content active">
@@ -15,7 +17,7 @@ function MovieContent() {
        mollitia sequi praesentium maxime possimus impedit at sint laborum maiores 
        porro rem consectetur molestias quis sed et?</p>
     <div className="button">
-      Button</div>
+    <Button variant="light opacity-50">info</Button></div>
   </div>
   )
 }

@@ -24,6 +24,11 @@ function Banner() {
     getMovie();
   }, []);
 
+  const habdleSlideChange= id =>{
+    console.log(id)
+
+  }
+
   return (
     <div className='banner'>
       <div className='movie'>
@@ -34,7 +39,7 @@ function Banner() {
               <MovieContent />
             </div>
             <div className="col-lg-6 col-md-12">
-              <MovieDate />
+              <MovieDate movieinfo={movieDetails} />
               <div className="trailer active d-flex align-item-center justify-content-center ">
                 <a href='#' className='plyBtn'><ion-icon name="play-circle-outline"></ion-icon></a>
                 <p className='text-center'>Watch Trailer</p>
@@ -43,7 +48,7 @@ function Banner() {
           </div>
         </div>
       </div>
-      {movieDetails && movieDetails.length > 0 && <MovieSwiper slides={movieDetails} />}
+      {movieDetails && movieDetails.length > 0 && <MovieSwiper slides={movieDetails}  slideChange={habdleSlideChange}/>}
     </div>
   );
 }

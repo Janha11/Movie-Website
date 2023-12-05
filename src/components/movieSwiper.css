@@ -3,7 +3,7 @@
     padding-bottom:50px
 }
 .movieSwiper{
-    position: absolute ;
+    position: absolute !important;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -20,6 +20,6 @@
     height: 200px;
 }
 .swiper-slide img{
-    display: block;
-    width: 100%;
+display: block;
+  width: 100%;
 }

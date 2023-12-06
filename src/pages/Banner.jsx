@@ -9,7 +9,7 @@ function Banner() {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const getMovie = () => {
-    fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
+    fetch('https://api.themoviedb.org/3/trending/all/week?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
       .then(res => res.json())
       .then(data => {
         setMovieDetails(data.results);

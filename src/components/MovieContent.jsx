@@ -11,10 +11,11 @@ function MovieContent({ movieinfo }) {
 
   return (
     <div className="content active">
-      <h1 className='movie-title'>{title}</h1>
+      <h1 className='movie-title'>{title?title:movieinfo.name}</h1>
       <h4>
         <span>{year}</span>
         <span> Imdb:{vote_average.toFixed(1)}</span>
+        
       </h4>
       <p>{overview}</p>
       <div className="button">

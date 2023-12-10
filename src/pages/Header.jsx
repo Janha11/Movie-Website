@@ -3,12 +3,13 @@ import navListData from '../Data/navListData'
 import NavListItem from '../components/NavListItem'
 import'./header.css'
 import Search from '../components/Search'
+import { Link } from 'react-router-dom'
 function Header() {
   return (
    <header>
-    <a href='/' className='logo'>
+    <Link to='/' className='logo'>
         Cinema
-    </a>
+    </Link>
     <ul className='nav'>
         
             {

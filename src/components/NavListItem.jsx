@@ -1,10 +1,11 @@
 import React from 'react'
 import'./navlistitem.css'
+import { Link } from 'react-router-dom'
 
 function NavListItem({nav}) {
   return (
   <li>
-    <a href={nav.link}>{nav.name}</a>
+    <Link to={nav.link}>{nav.name}</Link>
   </li>
   )
 }

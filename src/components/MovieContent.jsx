@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 
 function MovieContent({ movieinfo }) {
   // Destructure properties from the movieinfo object
-  const { title, release_date, overview, vote_average } = movieinfo;
-
+  const { title,  overview, vote_average,first_air_date } = movieinfo;
+console.log(movieinfo)
   // Extract year from the release_date
-  const year = release_date ? new Date(release_date).getFullYear() : '';
+  const year = first_air_date? new Date(first_air_date).getFullYear() : '';
 
   return (
     <div className="content active">

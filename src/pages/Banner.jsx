@@ -4,23 +4,16 @@ import './banner.css';
 import MovieContent from '../components/MovieContent';
 import MovieSwiper from '../components/MovieSwiper';
 
-function Banner() {
-  const [movieDetails, setMovieDetails] = useState([]);
+function Banner({ movieDetails }) {
+  console.log(movieDetails);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  const getMovie = () => {
-    fetch('https://api.themoviedb.org/3/trending/all/week?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
-      .then(res => res.json())
-      .then(data => {
-        setMovieDetails(data.results);
-        setSelectedMovie(data.results[0]); // Set the initial selected movie to the first in the array
-      })
-      .catch(err => console.log(err));
-  };
-
   useEffect(() => {
-    getMovie();
-  }, []);
+    // Set the initial selected movie to the first in the array when movieDetails changes
+    if (movieDetails.length > 0) {
+      setSelectedMovie(movieDetails[0]);
+    }
+  }, [movieDetails]);
 
   const handleSlideChange = (selectedSlide) => {
     // Update the selected movie when a slide is clicked

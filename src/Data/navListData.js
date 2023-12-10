@@ -7,10 +7,10 @@ const navListData=[
   },
 
   {
-    _id:2,
-    link:'#schedule',
-    name:'schedule',
-    active:false
+    _id: 2,
+    link: 'tv-shows',
+    name: 'TV Shows',
+    active: false
   },
 
   {

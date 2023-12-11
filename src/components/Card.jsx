@@ -1,6 +1,6 @@
 import React from 'react'
 import'./card.css'
-import { format } from 'date-fns'; 
+
 
 function Card({ key, data }) {
     return (
@@ -11,7 +11,7 @@ function Card({ key, data }) {
         )}
           <p>{data.original_title}</p>
           <div className='relese-date'>
-          <p style={{fontWeight: 200, opacity: 0.7 }}>{data.vote_average.toFixed(1)}</p>
+          <p style={{fontWeight: 200, opacity: 0.7 }}>Imdb:{data.vote_average.toFixed(1)}</p>
           <p style={{fontWeight: 200, opacity: 0.7 }}>{(data.release_date)}</p>
           </div>
           <div className="content">

@@ -3,12 +3,12 @@ import Schedule from './Schedule'
 import './main.css'
 import MainContent from './MainContent'
 
-function Main() {
-  
+function Main(moviedata1) {
+  const moviedetails=moviedata1
   return (
     <main>
-      
-      <Schedule/>
+      const moviedetails=moviedata1
+      <Schedule moviedetails1={moviedetails}/>
       {/* <MainContent/> */}
     </main>
   )

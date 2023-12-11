@@ -2,22 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import Slides from './Slides';
 
-function Schedule() {
+function Schedule({ moviedetails1 }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
-  const [moviedata, setmovieData] = useState([]);
-
-  const getMovie = () => {
-    fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
-      .then(res => res.json())
-      .then(data => {
-        setmovieData(data.results);
-      })
-      .catch(err => console.log(err));
-  };
-
-  useEffect(() => {
-    getMovie();
-  }, []); // Run only once when the component mounts
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +15,11 @@ function Schedule() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []); // Run only once when the component mounts
+  }, []);
+
+  // Run only once when the component mounts
+
+
 
   return (
     <section id='schedule' className='schedule'>
@@ -37,11 +27,11 @@ function Schedule() {
         <div className="row">
           <h4 className='section-title'>New Releases</h4>
         </div>
-       
+
         <div className='row mt-5'>
           {isMobile ?
-            <Slides key="slides" data={moviedata} /> :
-            moviedata.map(movieData => <Card key={movieData.id} data={movieData} />)
+            <Slides key="slides" data={moviedetails1} /> :
+            moviedetails1.map(movieData => <Card key={movieData.id} data={movieData} />)
           }
         </div>
       </div>

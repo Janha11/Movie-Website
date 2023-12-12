@@ -24,7 +24,7 @@ function Tv_Show() {
    
     const [moviedata1, setmovieData] = useState([]);
     const getMovie1 = () => {
-      fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
+      fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
         .then(res => res.json())
         .then(data => {
           setmovieData(data.results);

@@ -1,12 +1,17 @@
-import React from 'react'
-import'./search.css'
+import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 function Search() {
+
+
   return (
-    <div className='search'>
-      <input type="text"  placeholder='Search'/>
+    <div>
+      
+      <Link to='./search'> <input type="text" placeholder='Search'  /> </Link>
       
     </div>
-  )
+  );
 }
 
-export default Search
+export default Search;

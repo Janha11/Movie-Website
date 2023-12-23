@@ -1,16 +1,15 @@
-section .movie-card {
+ .movie-card {
+      
     position: relative;
-    height: auto;
-    margin: 10px;
-    padding: 10px;
-   
+    border: none;
     box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
     background-color: black !important;
     transition: 0.5s;
    
+   
 }
 
-section .movie-card::before {
+ .movie-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -24,30 +23,31 @@ section .movie-card::before {
     transform: scale(0);
 }
 
-section .movie-card p {
+ /* .movie-card p {
     position: relative;
-    height: 2em;
-    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px 10px;
     color: white;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-}
+   
+} */
 
-section .movie-card .relese-date {
+.movie-card .relese-date {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-}
-
-section .movie-card .relese-date p {
     color: white;
-    font-size: 1em;
-    margin: 0;
 }
 
-section .movie-card .content {
+.movie-card .relese-date p {
+    color: white;
+    margin: 0;
+    font-size: medium;
+    padding: 5px 0 ;
+
+}
+
+ .movie-card .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -64,7 +64,7 @@ section .movie-card .content {
     transform: scale(0);
 }
 
-section .movie-card .content h4 {
+ .movie-card .content h4 {
     position: relative;
     font-size: 1.2rem;
     font-weight: 500;

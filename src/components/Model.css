@@ -1,0 +1,58 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: 0.5s;
+    /* padding: 100px 100px; */
+  }
+  
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    font-size: 8rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    z-index: -1; /* Place the background image behind the content */
+    overflow: hidden;
+  }
+  
+  .bgImg.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Add a higher z-index for the content */
+  .row {
+    position: relative;
+    z-index: 1;
+  }
+  .f-5 {
+    font-weight: 500;
+    /* Add any other styles as needed */
+  }
+ p{
+    font-weight: bold;
+    font-size: 18px; /* Adjust the size as needed */
+    line-height: 1.5; 
+    
+}
+  

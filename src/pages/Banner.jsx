@@ -37,9 +37,10 @@ function Banner({ movieDetails }) {
                 </div>
                 <div className="col-lg-6 col-md-12">
               
-                  <MovieSwiper slides={movieDetails} slideChange={handleSlideChange} />
+                 
                 </div>
               </div>
+              <MovieSwiper slides={movieDetails} slideChange={handleSlideChange} />
             </div>
           </>
         )}

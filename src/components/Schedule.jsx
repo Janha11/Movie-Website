@@ -29,8 +29,7 @@ function Schedule({ moviedetails1 }) {
         </div>
 
         <div className='row mt-5'>
-          {isMobile ?
-            <Slides key="slides" data={moviedetails1} /> :
+          {
             moviedetails1.map(movieData => <Card key={movieData.id} data={movieData} />)
           }
         </div>

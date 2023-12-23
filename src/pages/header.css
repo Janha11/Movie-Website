@@ -12,7 +12,8 @@ header {
     align-items: center;
     padding: 30px 100px;
     transition: 0.5s;
-    z-index: 1000;
+    z-index: 2000;
+    
 
 }
 
@@ -40,3 +41,50 @@ header.scrolled {
 .nav {
     display: flex;
 }
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+
+  /* Media query for small screens */
+  .search-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .search-icon ion-icon {
+    margin-right: 8px;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+    }
+  
+    .nav.show-menu {
+    height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .search-icon {
+      margin-top: 8px;
+    }
+  }

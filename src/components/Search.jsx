@@ -1,4 +1,5 @@
 import React from 'react';
+import './search.css'
 
 import { Link } from 'react-router-dom';
 
@@ -6,9 +7,8 @@ function Search() {
 
 
   return (
-    <div>
-      
-      <Link to='./search'> <input type="text" placeholder='Search'  /> </Link>
+    <div className='search'>
+      <Link to='/search'> <ion-icon name="search-outline"></ion-icon> </Link>
       
     </div>
   );

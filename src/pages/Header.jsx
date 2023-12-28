@@ -43,8 +43,7 @@ function Header() {
           <NavListItem key={nav._id} nav={nav} />
         ))}
       </ul>
-      <Search/>
-      
+       
       <div className='menu-icon' onClick={toggleMenu}>
         {showMenu ? (
           <ion-icon name="close-outline" onClick={closeMenu}></ion-icon>
@@ -52,6 +51,9 @@ function Header() {
           <ion-icon name="menu-outline"></ion-icon>
         )}
       </div>
+      <div className='search'><Search/></div>
+      
+     
     </header>
   );
 }

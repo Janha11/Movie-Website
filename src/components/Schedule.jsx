@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import Slides from './Slides';
 
-function Schedule({ moviedetails1 }) {
+function Schedule({ Genres,moviedetails1 }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
   useEffect(() => {
@@ -23,6 +23,7 @@ function Schedule({ moviedetails1 }) {
 
   return (
     <section id='schedule' className='schedule'>
+   
       <div className="container-fluid">
         <div className="row">
           <h4 className='section-title'>New Releases</h4>

@@ -49,3 +49,39 @@
     color: white;
     margin: 20px 0 30px;
 }
+
+@media (max-width: 768px) {
+    .content {
+        max-width: 100%; /* Adjust the max-width as needed for smaller screens */
+    }
+
+    .movie-title {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .banner .content h4 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+    .banner .content p{
+        font-size: 15px;
+        /* display: none; */
+    }
+}
+/* Media query for small screens (up to 500px) */
+@media (max-width: 500px) {
+    .content {
+        max-width: 100%; /* Adjust the max-width as needed for smaller screens */
+    }
+
+    .movie-title {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .banner .content h4 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .banner .content p {
+       font-size:auto;
+    }
+}

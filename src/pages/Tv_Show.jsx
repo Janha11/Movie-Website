@@ -4,7 +4,8 @@ import Header from './Header';
 import Banner from './Banner';
 import '../components/main.css'
 import Schedule from '../components/Schedule';
-
+import Trend from './Trend';
+import Footer from './Footer';
 function Tv_Show() {
 
   const [movieDetails, setMovieDetails] = useState([]);
@@ -34,8 +35,18 @@ function Tv_Show() {
   
     useEffect(() => {
       getMovie1();
-    }, []); // Run only once when the component mounts
-  
+    }, []); 
+
+    const [slider, setSlides] = useState([]);
+    const fetchData = () => {
+      fetch('https://api.themoviedb.org/3/tv/on_the_air?language=en-US&page=1&api_key=95720290449bda3516db59a891a04122')
+          .then(response => response.json())
+          .then(data => setSlides(data.results))  // Extract the movies array from the API response
+          .catch(err => console.error(err));
+  }
+useEffect=(()=>{
+  fetchData()
+},[])
   
 
 
@@ -44,6 +55,8 @@ function Tv_Show() {
     <Header />
     <Banner  movieDetails={movieDetails}/>
     <main><Schedule moviedetails1={moviedata1}/></main>
+    <Trend slider={slider}/>
+    <Footer/>
     </div>
   );
 }

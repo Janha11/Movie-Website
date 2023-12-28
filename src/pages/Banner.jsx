@@ -32,7 +32,7 @@ function Banner({ movieDetails }) {
             <img src={`https://image.tmdb.org/t/p/original/${selectedMovie.backdrop_path}`} alt='' className='bgImg active' />
             <div className='Container-fluid'>
               <div className='row'>
-                <div className="col-lg-6 col-md-12">
+                <div className="col-lg-6 col-md-12 ">
                   <MovieContent movieinfo={selectedMovie} />
                 </div>
                 <div className="col-lg-6 col-md-12">

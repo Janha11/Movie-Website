@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grandstander:ital,wght@0,300;0,500;1,400;1,900&display=swap');
-
 
 header {
     position: fixed;
@@ -13,8 +11,6 @@ header {
     padding: 30px 100px;
     transition: 0.5s;
     z-index: 2000;
-    
-
 }
 
 header.scrolled {
@@ -28,15 +24,14 @@ header.scrolled {
 .logo {
     font-family: 'Dancing Script', cursive;
     font-family: 'Grandstander', cursive;
-    font-size: 35px;
+    font-size: 45px; /* Increased font size */
     color: white;
     letter-spacing: 2px;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
-
+    z-index: 2000;
 }
-
 
 .nav {
     display: flex;
@@ -45,46 +40,52 @@ header.scrolled {
 .menu-icon {
     display: none;
     cursor: pointer;
-  }
-  
+}
 
-  /* Media query for small screens */
-  .search-icon {
+/* Media query for small screens */
+.search-icon {
     display: flex;
     align-items: center;
     cursor: pointer;
     color: #fff;
-  }
-  
-  .search-icon ion-icon {
-    margin-right: 8px;
-  }
-  
-  /* Media query for small screens */
-  @media (max-width: 768px) {
-    .nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top:0;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-    }
-  
-    .nav.show-menu {
-    height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+}
 
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .search-icon {
-      margin-top: 8px;
-    }
+.search-icon ion-icon {
+    margin-right: 8px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .searchs{
+    display: block;
   }
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+    ion-icon {
+      color: white;
+      font-size: 2rem; /* Adjust the font size to your desired XL size */
+    }
+
+    .nav.show-menu {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .search-icon {
+        margin-top: 8px;
+    }
+}

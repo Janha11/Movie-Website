@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 
 function MovieContent({ movieinfo }) {
   // Destructure properties from the movieinfo object
-  const { name,  overview, vote_average,first_air_date,id } = movieinfo;
+  const { name,  overview, vote_average,first_air_date,id,title,release_date } = movieinfo;
 console.log(movieinfo)
   // Extract year from the release_date
-  const year = first_air_date? new Date(first_air_date).getFullYear() : '';
+  const date = first_air_date || release_date;
+const year = date ? new Date(date).getFullYear() : '';
+
 
   return (
     <div className="content active">
-      <h1 className='movie-title'>{name}</h1>
+      <h1 className='movie-title'>{name?name:title}</h1>
       <h4>
         <span>{year}</span>
         <span> Imdb:{vote_average.toFixed(1)}</span>
